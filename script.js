@@ -12,50 +12,70 @@
 
 'use strict';
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели ?", " ");
+// let numberOfFilms;
 
-const personalMivieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
 
-};
+// function start() {
+//     numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели ?", " ");
+//     while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели ?", " ");
+//     }
+// }
 
-// const   a = prompt("Один из последних просмотренных фильмов ?", ""),
-//         b = prompt("На сколько оцените его ?", ""),
-//         c = prompt("Один из последних просмотренных фильмов ?", ""),
-//         d = prompt("На сколько оцените его ?", "");
+// start();
 
-// personalMivieDB.movies[a] = b;
-// personalMivieDB.movies[c] = d;
+// const personalMoviesDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
 
-// console.log(personalMivieDB);  
+// };
 
-//Оптимизация через цикл for. 
-for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов ?", ""),
-        b = prompt("На сколько оцените его ?", "");
-    if (a != null && b != null && a != " " && b != '' && a.length < 50) {
-        personalMivieDB.movies[a] = b;
-        console.log('ok');
-    } else {
-        console.log('error');
-        i--;
-    }
+// function LastFilm() {
 
+
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt("Один из последних просмотренных фильмов ?", ""),
+//             b = prompt("На сколько оцените его ?", "");
+//         if (a != null && b != null && a != " " && b != '' && a.length < 50) {
+//             personalMoviesDB.movies[a] = b;
+//             console.log('ok');
+//         } else {
+//             console.log('error');
+//             i--;
+//         }
+
+//     }
+
+// }
+// LastFilm();
+
+
+// function personalLvl() {
+//     if (personalMoviesDB.count < 10) {
+//         console.log('Мало фильмов');
+//     } else if (personalMoviesDB.count >= 10 && personalMoviesDB.count < 30) {
+//         console.log('Классика просмотра');
+//     } else if (personalMoviesDB.count >= 50) {
+//         console.log('Иди работать!');
+//     } else {
+//         console.log('Error');
+//     }
+// }
+// personalLvl();
+
+// console.log(personalMoviesDB);
+
+
+function LearnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
 }
 
-
-if (personalMivieDB.count < 10) {
-    console.log('Мало фильмов');
-} else if (personalMivieDB.count >= 10 && personalMivieDB.count < 30) {
-    console.log('Классика просмотра');
-} else if (personalMivieDB.count >= 50) {
-    console.log('Иди работать!');
-} else {
-    console.log('Error');
+function done() {
+    console.log('Я прошел этот урок!');
 }
 
-console.log(personalMivieDB);
+LearnJS('JavaScript', done);
